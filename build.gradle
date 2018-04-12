@@ -1,0 +1,30 @@
+group = "sample-gauge-tests"
+version = "1.0-SNAPSHOT"
+description = "Sample Gauge Test Project"
+apply plugin: 'java'
+apply plugin: 'gauge'
+
+project.ext {
+    seleniumVersion = '3.4.0'
+    assertJVersion = '3.5.2'
+    gaugeVersion = '0.6.3'
+}
+
+dependencies {
+    testCompile 'org.assertj:assertj-core:' + assertJVersion
+    testCompile 'org.seleniumhq.selenium:selenium-java:' + seleniumVersion
+    testCompile 'com.thoughtworks.gauge:gauge-java:' + gaugeVersion
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.thoughtworks.gauge.gradle:gauge-gradle-plugin:+'
+    }
+}
+
+repositories {
+    mavenCentral()
+}

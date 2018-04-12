@@ -1,0 +1,14 @@
+# Gradle:
+/.idea/
+/target/
+.gradle/
+build/
+logs/
+classes/
+.gauge/
+out/
+
+
+.idea_modules/
+*.iml
+
